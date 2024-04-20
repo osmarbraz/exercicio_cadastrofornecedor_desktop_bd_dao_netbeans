@@ -10,7 +10,7 @@
  - Toda iteração com banco de dados é tratada diretamente pelo DAO.<br>
  - Os dados de configuração(Servidor, Database, Usuario, Senha) da integração do java com o banco de dados estão no arquivo src/dao/DadosBanco.java.<br>
  - Dependência do Driver JDBC foi especificada no arquivo pom.xml.<br>
- - O Driver de conexão com o MySQL e espeficado na classe Conexao.java.<br>
+ - O Driver de conexão com o MySQL e espeficado na classe src/dao/Conexao.java.<br>
  - Crie o banco de dados antes de executar o programa, as especificações da tabela estão no arquivo banco.sql.<br>
  - A pasta src contêm os fontes do projeto.<br>
  - A interface gráfica foi construída **com** o auxílio da IDE NetBeans.<br>
@@ -26,6 +26,7 @@
 
 Uma empresa necessita de um sistema para desktop em Java para cadastrar os seus fornecedores em um banco de dados. As informações que cada fornecedor deve preencher são as seguintes: Nome Fantasia, Razão Social, CNPJ, Cidade e Região. O campo “região” deve usar uma caixa de escolha para as opções Sul, Sudeste, Centro-Oeste, Norte e Nordeste. A tabela e o banco de dados têm o nome “fornecedor”. A tabela tem a seguinte estrutura:
 
+```
 CREATE TABLE fornecedor (
 	fornecedorID    INTEGER NOT NULL AUTO_INCREMENT,    	 
 	nomeFantasia    VARCHAR(50) NOT NULL,     
@@ -35,6 +36,7 @@ CREATE TABLE fornecedor (
 	regiao       	VARCHAR(20),
 	PRIMARY KEY(fornecedorID)    
 );
+```
 
 O layout da janela é apresentado abaixo:
 
